@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: white;
+    min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 30px;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.welcome-text {
+    font-size: 15px;
+}
+
+.nav-btn {
+    text-decoration: none;
+    color: white;
+    background: #ef4444;
+    padding: 10px 16px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.nav-btn:hover {
+    background: #dc2626;
+}
+
+/* Main */
+.main-wrapper {
+    width: 95%;
+    max-width: 1300px;
+    margin: 30px auto;
+}
+
+.main-wrapper h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 36px;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.controls select,
+.controls button,
+.auth-container input,
+.auth-container button {
+    padding: 12px 14px;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+.controls button,
+.auth-container button {
+    background: #3b82f6;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.controls button:hover,
+.auth-container button:hover {
+    background: #2563eb;
+}
+
+/* News cards */
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
+}
+
+.card {
+    background: rgba(255,255,255,0.08);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+    transition: transform 0.25s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+.card-content {
+    padding: 18px;
+}
+
+.card-content h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+
+.card-content p {
+    color: #d1d5db;
+    font-size: 15px;
+    line-height: 1.6;
+    min-height: 72px;
+}
+
+.card-actions {
+    margin-top: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.card-actions a,
+.card-actions button {
+    text-decoration: none;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 14px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.card-actions a {
+    background: #22c55e;
+    color: white;
+}
+
+.card-actions button {
+    background: #f59e0b;
+    color: white;
+}
+
+/* Auth pages */
+.auth-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.auth-container {
+    width: 100%;
+    max-width: 420px;
+    background: rgba(255,255,255,0.08);
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+}
+
+.auth-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+.auth-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.auth-container input {
+    outline: none;
+}
+
+.switch-link {
+    margin-top: 18px;
+    text-align: center;
+}
+
+.switch-link a {
+    color: #60a5fa;
+    text-decoration: none;
+}
+
+.error-msg {
+    margin-top: 15px;
+    text-align: center;
+    color: #fca5a5;
+}
+
+.empty-msg {
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+}
