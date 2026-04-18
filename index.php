@@ -7,6 +7,7 @@ include("includes/auth_check.php");
 <head>
     <title>News Aggregator</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -19,7 +20,7 @@ include("includes/auth_check.php");
     </nav>
 
     <div class="main-wrapper">
-        <h1>Latest Headlines</h1>
+        <h1>🔥 Trending News</h1>
 
         <div class="controls">
             <select id="category">

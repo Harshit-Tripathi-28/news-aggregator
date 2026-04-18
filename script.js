@@ -1,15 +1,13 @@
 async function loadNews() {
+    let container = document.getElementById("news");
+    container.innerHTML = `<div class="loader"></div>`;
+
     let category = document.getElementById("category").value;
 
-    try {
-        let res = await fetch(`api/fetch_news.php?category=${category}`);
-        let data = await res.json();
+    let res = await fetch(`api/fetch_news.php?category=${category}`);
+    let data = await res.json();
 
-        displayNews(data.articles || []);
-    } catch (error) {
-        document.getElementById("news").innerHTML = "<p>Failed to load news.</p>";
-        console.error(error);
-    }
+    displayNews(data.articles || []);
 }
 
 function displayNews(articles) {
@@ -17,7 +15,7 @@ function displayNews(articles) {
     container.innerHTML = "";
 
     if (articles.length === 0) {
-        container.innerHTML = "<h2 class='empty-msg'>No news found</h2>";
+        container.innerHTML = "<h2>No news found 😢</h2>";
         return;
     }
 
